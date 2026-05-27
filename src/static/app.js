@@ -335,6 +335,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }).format(parsed);
   }
 
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (char) => {
+      const entities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      };
+      return entities[char] || char;
+    });
+  }
+
   function showAnnouncementManagerMessage(text, type) {
     announcementManagerMessage.textContent = text;
     announcementManagerMessage.className = `message ${type}`;
@@ -430,8 +443,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(
         (announcement) => `
           <article class="announcement-admin-item" data-id="${announcement.id}">
-            <h5>${announcement.title}</h5>
-            <p>${announcement.message}</p>
+            <h5>${escapeHtml(announcement.title)}</h5>
+            <p>${escapeHtml(announcement.message)}</p>
             <div class="announcement-admin-meta">
               Expira em ${formatDateTime(announcement.expires_at)}
               ${
