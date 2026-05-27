@@ -666,6 +666,252 @@ footer {
 }
 
 .announcement-banner {
+  margin-bottom: 14px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #dce6ff;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.75), transparent 56%),
+    linear-gradient(125deg, #dbe8ff 0%, #eef7ff 40%, #f4f7ff 100%);
+  box-shadow: 0 10px 22px rgba(26, 35, 126, 0.12);
+}
+
+.announcement-banner-head {
+  margin-bottom: 10px;
+}
+
+.announcement-kicker {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1f3a7a;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.announcement-banner-head h3 {
+  font-size: 1.1rem;
+  color: #172554;
+}
+
+.announcement-banner-list {
+  display: grid;
+  gap: 10px;
+}
+
+.announcement-item {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #c8d7ff;
+  background-color: rgba(255, 255, 255, 0.86);
+}
+
+.announcement-item h4 {
+  font-size: 0.95rem;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.announcement-item p {
+  color: #24304b;
+  margin-bottom: 6px;
+}
+
+.announcement-meta {
+  font-size: 0.76rem;
+  color: #334155;
+}
+
+.announcement-manager-content {
+  max-width: 760px;
+  width: min(95vw, 760px);
+  max-height: 88vh;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.announcement-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.announcement-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #f9fbff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+}
+
+.form-group textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(83, 75, 174, 0.14);
+}
+
+.announcement-date-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.announcement-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancel-btn {
+  background-color: #e9edf4;
+  color: #172554;
+}
+
+.confirm-btn,
+#announcement-save-button {
+  background: linear-gradient(130deg, #1a237e, #0f4aa1);
+  color: #fff;
+}
+
+.announcement-list-wrap {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.announcement-list-wrap h4 {
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.announcement-manager-list {
+  display: grid;
+  gap: 8px;
+}
+
+.announcement-admin-item {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.announcement-admin-item h5 {
+  color: #1f357a;
+  margin-bottom: 4px;
+}
+
+.announcement-admin-item p {
+  margin-bottom: 4px;
+}
+
+.announcement-admin-meta {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.announcement-admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.announcement-admin-actions .delete-btn {
+  background-color: #b91c1c;
+}
+
+.announcement-admin-empty {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.auth-notice {
+  width: 100%;
+  padding: 7px 9px;
+  border-radius: 8px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.76rem;
+  border: 1px dashed #ccd5e5;
+  background-color: #f8fafc;
+}
+
+.message {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 0.84rem;
+}
+
+.message.success {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid #b7dfbb;
+}
+
+.message.error {
+  background-color: var(--error-light);
+  color: var(--error);
+  border: 1px solid #f5c2c7;
+}
+
+.message.info {
+  background-color: var(--info-light);
+  color: var(--info);
+  border: 1px solid #aed8df;
+}
+
+@media (max-width: 767px) {
+  #user-controls {
+    position: static;
+    margin-top: 10px;
+  }
+
+  #user-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .announcement-date-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.announcement-banner {
   background-color: #4caf50;
   color: white;
   text-align: center;
